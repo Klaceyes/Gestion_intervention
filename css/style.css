@@ -1,0 +1,50 @@
+@charset "UTF-8"
+
+
+body, html 
+{
+    padding: 0;
+    margin: 0;
+}
+body{
+	font-family: "arial", arial, serif;
+}
+
+a, a:hover {
+    text-decoration: none;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+.header {
+    background-color: #D8161F;
+    height: 100px;
+    line-height: 100px;
+}
+
+
+.menu {
+    float: right;
+}
+
+.menu a {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+.menu a:hover {
+    color: #2C3E50;
+}
+
+.logo{
+	float:left;
+	margin-right: 20px;
+
+}
+
+table {
+	border-color: #7700FF;
+}
