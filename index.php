@@ -15,13 +15,11 @@
 		<div class="container">
 		<img src="image/logo_sncf.png" class="logo" />
 		<nav class="menu">
-			<a href="index.php?page=1"> Evenement
+			<a href="index.php?page=1"> Client
 			</a>
-			<a href="index.php?page=2"> News
+			<a href="index.php?page=2"> Technicien
 			</a>
-			<a href="index.php?page=3"> Produit
-			</a>
-			<a href="index.php?page=4"> Employe
+			<a href="index.php?page=3"> Intervention
 			</a>
 		</nav>
 	</div>			
@@ -136,42 +134,6 @@
 			$resultats = selectAllC("produit");
 				include("vue/vueproduit.php");
 			break;
-
-
-			
-			case 4:
-
-			if(isset($_GET['action']) && isset($_GET['idemploye']))
-					{
-						$action = $_GET['action'];
-						$idemploye = $_GET['idemploye'];
-						if($action == "X")
-						{
-							deleteEmployeC($idemploye);
-						}
-						else if ($action == "E")
-						{
-							$resultat = selectWhereIdEmployeC ($idemploye);
-							
-						}
-					}
-
-					if(isset($_POST['Modifier']))
-					{
-						updateEmployeC($_POST) ;
-						$resultat = null;
-					}
-
-					if(isset($_POST["Enregistrer"]))
-					{
-						insertEmployeC($_POST);
-					}
-
-			$resultats = selectAllC("employe");
-				include("vue/vueemploye.php");
-			break;
-
-				
 			
 		}
 	?>
